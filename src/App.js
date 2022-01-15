@@ -6,7 +6,7 @@ import BlogContextProvider from "./contexts/BlogContext";
 
 function App() {
   return (
-    <div>
+    <div className="App">
       <Navbar />
     </div>
 

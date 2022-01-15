@@ -18,5 +18,6 @@
     "*yarn": true,
     "*public": true,
     "src\\redux": true
-  }
+  },
+  "cSpell.words": ["appbar", "haspopup"]
 }
