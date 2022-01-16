@@ -1,20 +1,18 @@
-import AppRouter from "./app-router/AppRouter";
 import "./App.css";
-import Navbar from "./components/Navbar";
-import { AuthContextProvider } from "./contexts/AuthContext";
-import BlogContextProvider from "./contexts/BlogContext";
-
+import AuthContextProvider from "./context/AuthContextProvider";
+import AppRouter from "./router/AppRouter";
+import { ToastContainer } from "react-toastify";
+import { BlogContextProvider } from "./context/BlogContextProvider";
 function App() {
   return (
     <div className="App">
-      <Navbar />
+      <AuthContextProvider>
+        <BlogContextProvider>
+          <AppRouter />
+          <ToastContainer />
+        </BlogContextProvider>
+      </AuthContextProvider>
     </div>
-
-    // <AuthContextProvider>
-    //   <BlogContextProvider>
-    //     <AppRouter />
-    //   </BlogContextProvider>
-    // </AuthContextProvider>
   );
 }
 
